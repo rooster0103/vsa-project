@@ -31,7 +31,7 @@ def prime(num):
 
 
 
-"""#def prime(num):
+#def prime(num):
     #Takes a number and returns True if the number is prime, otherwise False
     #:param num: int
     #:return: bool
@@ -40,16 +40,63 @@ def prime(num):
 
 # Part II
 
-def intersection(lst1, lst2):
-    
-    Takes two lists and returns a list of the elements in common between the lists
-    :param lst1: list, any type
-    :param lst2: list, any type
-    :return: list, any type
-    
+
+
+
+
+
+
+
+listb=[]
+lista = []
+item=0
+def inersection(lista,listb):
+    output_list=[]
+    for item in lisa:
+        if item in listb:
+            if item not in output_list:
+                output_list.append(item)
+
+    print output_list
+    return output_list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     """def intersection(lst1, lst2):
+
+
     return ["test"]
 
 # Part III
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def find_ab(side1, side2, side3):
     
@@ -144,7 +191,7 @@ print("Intersection Tests")
 # Test 6
 if intersection(L1, L2) == []:
     print("Test 6: PASS")
-else:
+else:  
     print("Test 6: FAIL")
 
 # Test 7

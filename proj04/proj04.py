@@ -20,7 +20,14 @@ for letter in range(1,y+1):
     reverse_list.append(x[-1])
     x=x[:-1]
 
+print hat
 
 
 
-if hat == reverse
+if alist==reverse_list:
+    print x, "is a pallindrome"
+
+else:
+    print x, "is not a palindrome"
+
+
