@@ -62,6 +62,17 @@ def get_frequency_dict(sequence):
 # Problem #1: Scoring a word
 #
 def get_word_score(word, n):
+    
+
+
+
+
+
+
+
+
+
+
     """
     Returns the score for a word. Assumes the word is a
     valid word.
@@ -129,8 +140,34 @@ def deal_hand(n):
 #
 # Problem #2: Update a hand by removing letters
 #
+def update_hand(hand , word):
+    hand={}
+
 def update_hand(hand, word):
-    """
+    '''
+    hand = {"w": 5, "o": 2, "r": 1, "k": 7}
+    word = ['w', 'o', 'o', 'r', 'k', 'k']
+    '''
+    var1 = Counter(word)
+    print var1
+
+    for i in range(0, len(word)):
+        l = var1[i]
+        hand[word[i]] -= l + 1
+
+    print hand
+    return hand
+
+
+
+
+
+
+
+
+
+
+"""
     Assumes that 'hand' has all the letters in word.
 	In other words, this assumes that however many times
 	a letter appears in 'word', 'hand' has at least as
@@ -144,8 +181,9 @@ def update_hand(hand, word):
     word: string
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
-    """
+"""
     # TO DO ...
+
 
 #
 # Problem #3: Test word validity
