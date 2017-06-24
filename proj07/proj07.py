@@ -25,7 +25,7 @@ WORDLIST_FILENAME = "words.txt"
 def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-    
+
     Depending on the size of the word list, this function may
     take a while to finish.
     """
@@ -53,7 +53,7 @@ def get_frequency_dict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-	
+
 
 # (end of helper code)
 # -----------------------------------
@@ -62,7 +62,7 @@ def get_frequency_dict(sequence):
 # Problem #1: Scoring a word
 #
 def get_word_score(word, n):
-    
+
 
 
 
@@ -88,7 +88,7 @@ def get_word_score(word, n):
     returns: int >= 0
     """
     # TO DO...
-    
+
 #
 # Make sure you understand how this function works and what it does!
 #
@@ -126,15 +126,15 @@ def deal_hand(n):
     """
     hand={}
     num_vowels = n / 3
-    
+
     for i in range(num_vowels):
         x = VOWELS[random.randrange(0,len(VOWELS))]
         hand[x] = hand.get(x, 0) + 1
-        
-    for i in range(num_vowels, n):    
+
+    for i in range(num_vowels, n):
         x = CONSONANTS[random.randrange(0,len(CONSONANTS))]
         hand[x] = hand.get(x, 0) + 1
-        
+
     return hand
 
 #
@@ -171,7 +171,7 @@ def update_hand(hand, word):
     Assumes that 'hand' has all the letters in word.
 	In other words, this assumes that however many times
 	a letter appears in 'word', 'hand' has at least as
-	many of that letter in it. 
+	many of that letter in it.
 
     Updates the hand: uses up the letters in the given word
     and returns the new hand, without those letters in it.
@@ -179,7 +179,7 @@ def update_hand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
 """
     # TO DO ...
@@ -193,7 +193,7 @@ def is_valid_word(word, hand, word_list):
     Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
     Does not mutate hand or word_list.
-    
+
     word: string
     hand: dictionary (string -> int)
     word_list: list of lowercase strings
@@ -215,7 +215,7 @@ def play_hand(hand, word_list):
     Allows the user to play the given hand, as follows:
 
     * The hand is displayed.
-    
+
     * The user may input a word.
 
     * An invalid word is rejected, and a message is displayed asking
@@ -235,16 +235,30 @@ def play_hand(hand, word_list):
 
       hand: dictionary (string -> int)
       word_list: list of lowercase strings
-      
+
     """
     # TO DO ...
 
 #
 # Problem #5: Playing a game
 # Make sure you understand how this code works!
-# 
+#
 def play_game(word_list):
-    """
+    death=  raw_input("Please input 'n' or 'r' or 'e'")
+    if death == "n":
+        deal_hand(n)
+    if death == "e":
+        quit()
+    if death == "r":
+
+        #do a thing
+
+
+
+
+
+
+ """
     Allow the user to play an arbitrary number of hands.
 
     * Asks the user to input 'n' or 'r' or 'e'.
@@ -266,3 +280,12 @@ def play_game(word_list):
 if __name__ == '__main__':
     word_list = load_words()
     play_game(word_list)
+
+
+
+
+
+
+
+
+
